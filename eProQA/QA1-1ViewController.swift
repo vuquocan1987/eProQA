@@ -31,6 +31,8 @@ class QA1_1ViewController: UIViewController {
             textForKidLabel.sizeToFit()
             explanationTextLabel.text = (questionData[QuestionDataKeys.text] as! String)
 //            startQuestionButton.setTitle(questionData[QuestionDataKeys.], for: <#T##UIControl.State#>)
+            let timeAndNumberOfQuestionText = "\(questionData[QuestionDataKeys.length_of_time] as! Int) \n \(questionData[QuestionDataKeys.all_questions] as! Int)"
+            timeandNumberofQuestionLabel.text = timeAndNumberOfQuestionText
             
         }
 

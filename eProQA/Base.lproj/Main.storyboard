@@ -64,42 +64,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGf-f7-bOe">
-                                <rect key="frame" x="137.5" y="536" width="100" height="30"/>
-                                <state key="normal" title="Start Question"/>
-                                <connections>
-                                    <segue destination="aPg-HD-LxA" kind="show" id="P7W-fL-ibI"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text For Kid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSe-cb-mdy">
-                                <rect key="frame" x="142" y="94" width="91" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time - Number of Quest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFZ-BE-3s2">
-                                <rect key="frame" x="94.5" y="565" width="186" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explain Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jey-l5-ygi">
-                                <rect key="frame" x="142" y="142" width="91" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="133" translatesAutoresizingMaskIntoConstraints="NO" id="vUh-pk-XhM">
+                                <rect key="frame" x="8" y="72" width="359" height="587"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text For Kid" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSe-cb-mdy">
+                                        <rect key="frame" x="134" y="0.0" width="91" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explain Text" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jey-l5-ygi">
+                                        <rect key="frame" x="134" y="153.5" width="91" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGf-f7-bOe">
+                                        <rect key="frame" x="129.5" y="307" width="100" height="126.5"/>
+                                        <state key="normal" title="Start Question"/>
+                                        <connections>
+                                            <segue destination="aPg-HD-LxA" kind="show" id="P7W-fL-ibI"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time - Number of Quest" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFZ-BE-3s2">
+                                        <rect key="frame" x="86.5" y="566.5" width="186" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="VSe-cb-mdy" firstAttribute="top" secondItem="ry3-hN-AH7" secondAttribute="top" constant="30" id="3Lp-Fl-m6l"/>
-                            <constraint firstItem="mGf-f7-bOe" firstAttribute="centerX" secondItem="ry3-hN-AH7" secondAttribute="centerX" id="7z1-Yb-0H8"/>
-                            <constraint firstItem="Jey-l5-ygi" firstAttribute="centerX" secondItem="ry3-hN-AH7" secondAttribute="centerX" id="Hke-KR-R34"/>
-                            <constraint firstItem="bFZ-BE-3s2" firstAttribute="centerX" secondItem="ry3-hN-AH7" secondAttribute="centerX" id="frU-50-FYU"/>
-                            <constraint firstItem="Jey-l5-ygi" firstAttribute="top" secondItem="VSe-cb-mdy" secondAttribute="bottom" constant="27" id="qFi-8b-run"/>
-                            <constraint firstItem="VSe-cb-mdy" firstAttribute="centerX" secondItem="ry3-hN-AH7" secondAttribute="centerX" id="sKE-Lf-VbE"/>
-                            <constraint firstItem="bFZ-BE-3s2" firstAttribute="firstBaseline" secondItem="mGf-f7-bOe" secondAttribute="baseline" constant="24.5" symbolType="layoutAnchor" id="tSh-Yd-hjJ"/>
-                            <constraint firstItem="mGf-f7-bOe" firstAttribute="top" secondItem="Jey-l5-ygi" secondAttribute="bottom" constant="373.5" id="wnS-q2-CmY"/>
+                            <constraint firstItem="vUh-pk-XhM" firstAttribute="centerX" secondItem="ry3-hN-AH7" secondAttribute="centerX" id="EdS-k6-mGF"/>
+                            <constraint firstItem="ry3-hN-AH7" firstAttribute="bottom" secondItem="vUh-pk-XhM" secondAttribute="bottom" constant="8" id="Tv0-br-QXl"/>
+                            <constraint firstItem="vUh-pk-XhM" firstAttribute="leading" secondItem="ry3-hN-AH7" secondAttribute="leading" constant="8" id="Vfg-SR-Gnr"/>
+                            <constraint firstItem="ry3-hN-AH7" firstAttribute="trailing" secondItem="vUh-pk-XhM" secondAttribute="trailing" constant="8" id="kal-3V-MEn"/>
+                            <constraint firstItem="vUh-pk-XhM" firstAttribute="top" secondItem="ry3-hN-AH7" secondAttribute="top" constant="8" id="lCj-LQ-QqO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ry3-hN-AH7"/>
                     </view>
