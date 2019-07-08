@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hr7-iJ-86J">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hr7-iJ-86J">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Moking Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="eProQA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MokingHomeViewController" customModule="eProQA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,7 +83,7 @@
                                         <rect key="frame" x="129.5" y="307" width="100" height="126.5"/>
                                         <state key="normal" title="Start Question"/>
                                         <connections>
-                                            <segue destination="aPg-HD-LxA" kind="show" id="P7W-fL-ibI"/>
+                                            <segue destination="aPg-HD-LxA" kind="show" identifier="ToQuestion" id="P7W-fL-ibI"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time - Number of Quest" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFZ-BE-3s2">
@@ -116,10 +116,10 @@
             </objects>
             <point key="canvasLocation" x="1285.5999999999999" y="5.8470764617691158"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--QuestionsUI Navigation View Controller-->
         <scene sceneID="fy0-dW-10V">
             <objects>
-                <navigationController id="aPg-HD-LxA" sceneMemberID="viewController">
+                <navigationController id="aPg-HD-LxA" customClass="QuestionsUINavigationViewController" customModule="eProQA" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="teF-Wa-tZw">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -132,30 +132,98 @@
             </objects>
             <point key="canvasLocation" x="2060" y="6"/>
         </scene>
-        <!--View Controller-->
+        <!--Sub View Controller-->
         <scene sceneID="dl6-Sg-jUN">
             <objects>
-                <viewController id="4cW-gR-Ph2" sceneMemberID="viewController">
+                <viewController id="4cW-gR-Ph2" customClass="QA1_1SubViewController" customModule="eProQA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pqa-67-14X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeA-uS-Q9N">
-                                <rect key="frame" x="166" y="209" width="14" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IW0-4v-304" customClass="FPStepView">
+                                <rect key="frame" x="8" y="72" width="359" height="20"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="bbI-b4-Hta"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5W-9H-MrO">
+                                <rect key="frame" x="20" y="100.5" width="21" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="cMO-5d-TBl"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9AI-3L-JWU">
+                                <rect key="frame" x="0.0" y="134" width="375" height="513"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionChoice" id="4Pg-uR-tDM" customClass="AnswerTableViewCell" customModule="eProQA" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Pg-uR-tDM" id="eAh-eQ-IIq">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="checked" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wn4-Tl-myR">
+                                                    <rect key="frame" x="15" y="11" width="66" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="checkLabel" destination="Wn4-Tl-myR" id="DSe-GV-El1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="nextButton" id="wBa-mi-Jjm" customClass="NextButtonUITableViewCell" customModule="eProQA" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wBa-mi-Jjm" id="8zx-9m-oYL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQh-4o-quy">
+                                                    <rect key="frame" x="138.5" y="7" width="98" height="30"/>
+                                                    <state key="normal" title="Next Question"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fQh-4o-quy" firstAttribute="centerY" secondItem="8zx-9m-oYL" secondAttribute="centerY" id="17w-OF-XeW"/>
+                                                <constraint firstItem="fQh-4o-quy" firstAttribute="centerX" secondItem="8zx-9m-oYL" secondAttribute="centerX" id="Kt7-1e-XJk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nextQuestionButton" destination="fQh-4o-quy" id="eXc-R8-mMF"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IW0-4v-304" firstAttribute="leading" secondItem="x5T-3q-Oqa" secondAttribute="leading" constant="8" id="8Sq-Lk-cVW"/>
+                            <constraint firstItem="G5W-9H-MrO" firstAttribute="leading" secondItem="x5T-3q-Oqa" secondAttribute="leading" constant="20" id="BeT-ev-1Ac"/>
+                            <constraint firstItem="G5W-9H-MrO" firstAttribute="firstBaseline" secondItem="IW0-4v-304" secondAttribute="baseline" constant="24.5" symbolType="layoutAnchor" id="eg3-Wm-NmD"/>
+                            <constraint firstItem="IW0-4v-304" firstAttribute="top" secondItem="x5T-3q-Oqa" secondAttribute="top" constant="8" id="wYK-lP-UOT"/>
+                            <constraint firstItem="x5T-3q-Oqa" firstAttribute="trailing" secondItem="IW0-4v-304" secondAttribute="trailing" constant="8" id="yme-r1-0tE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="x5T-3q-Oqa"/>
                     </view>
                     <navigationItem key="navigationItem" id="IZB-1G-eeb"/>
+                    <connections>
+                        <outlet property="questionTableView" destination="9AI-3L-JWU" id="R20-Ql-0eW"/>
+                        <outlet property="stepView" destination="IW0-4v-304" id="vf5-ab-cKU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KdI-mX-dIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2802" y="2"/>
+            <point key="canvasLocation" x="2800.8000000000002" y="1.3493253373313345"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ReK-uI-DyG">

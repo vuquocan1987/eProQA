@@ -3,29 +3,43 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		510C58E922D21A7100B69714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C58E822D21A7100B69714 /* AppDelegate.swift */; };
-		510C58EB22D21A7100B69714 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C58EA22D21A7100B69714 /* ViewController.swift */; };
+		510C58EB22D21A7100B69714 /* MokingHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C58EA22D21A7100B69714 /* MokingHomeViewController.swift */; };
 		510C58EE22D21A7100B69714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 510C58EC22D21A7100B69714 /* Main.storyboard */; };
 		510C58F022D21A7300B69714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 510C58EF22D21A7300B69714 /* Assets.xcassets */; };
 		510C58F322D21A7300B69714 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 510C58F122D21A7300B69714 /* LaunchScreen.storyboard */; };
 		510C58FB22D21BB000B69714 /* QAList.json in Resources */ = {isa = PBXBuildFile; fileRef = 510C58FA22D21BB000B69714 /* QAList.json */; };
 		510C58FD22D22EB300B69714 /* QA1-1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C58FC22D22EB300B69714 /* QA1-1ViewController.swift */; };
+		A9602DDB387BCB613CA4B2D3 /* Pods_eProQA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 266FC5981EF285E34C0BA274 /* Pods_eProQA.framework */; };
+		FE7FDCEB22D2EDAC008EB2AA /* QA1-1SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7FDCEA22D2EDAC008EB2AA /* QA1-1SubViewController.swift */; };
+		FE7FDCED22D301B9008EB2AA /* NextButtonUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7FDCEC22D301B9008EB2AA /* NextButtonUITableViewCell.swift */; };
+		FE7FDCF122D320CE008EB2AA /* QuestionsUINavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7FDCF022D320CE008EB2AA /* QuestionsUINavigationViewController.swift */; };
+		FE7FDCF422D33BC4008EB2AA /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7FDCF322D33BC4008EB2AA /* AnswerTableViewCell.swift */; };
+		FE7FDCF722D34F94008EB2AA /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7FDCF622D34F94008EB2AA /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		266FC5981EF285E34C0BA274 /* Pods_eProQA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eProQA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		510C58E522D21A7100B69714 /* eProQA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eProQA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		510C58E822D21A7100B69714 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		510C58EA22D21A7100B69714 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		510C58EA22D21A7100B69714 /* MokingHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MokingHomeViewController.swift; sourceTree = "<group>"; };
 		510C58ED22D21A7100B69714 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		510C58EF22D21A7300B69714 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		510C58F222D21A7300B69714 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		510C58F422D21A7300B69714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		510C58FA22D21BB000B69714 /* QAList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = QAList.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		510C58FC22D22EB300B69714 /* QA1-1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QA1-1ViewController.swift"; sourceTree = "<group>"; };
+		BB7CECD5E9B07E59CA3F99BC /* Pods-eProQA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eProQA.debug.xcconfig"; path = "Target Support Files/Pods-eProQA/Pods-eProQA.debug.xcconfig"; sourceTree = "<group>"; };
+		C17EB5A48B32114420DBDECA /* Pods-eProQA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eProQA.release.xcconfig"; path = "Target Support Files/Pods-eProQA/Pods-eProQA.release.xcconfig"; sourceTree = "<group>"; };
+		FE7FDCEA22D2EDAC008EB2AA /* QA1-1SubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QA1-1SubViewController.swift"; sourceTree = "<group>"; };
+		FE7FDCEC22D301B9008EB2AA /* NextButtonUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButtonUITableViewCell.swift; sourceTree = "<group>"; };
+		FE7FDCF022D320CE008EB2AA /* QuestionsUINavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsUINavigationViewController.swift; sourceTree = "<group>"; };
+		FE7FDCF322D33BC4008EB2AA /* AnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTableViewCell.swift; sourceTree = "<group>"; };
+		FE7FDCF622D34F94008EB2AA /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9602DDB387BCB613CA4B2D3 /* Pods_eProQA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +59,8 @@
 			children = (
 				510C58E722D21A7100B69714 /* eProQA */,
 				510C58E622D21A7100B69714 /* Products */,
+				6A34069909CF41793D7BEB1B /* Pods */,
+				7FC549BE9232947904449211 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +75,62 @@
 		510C58E722D21A7100B69714 /* eProQA */ = {
 			isa = PBXGroup;
 			children = (
+				FE7FDCF522D34F71008EB2AA /* Model */,
+				FE7FDCEF22D301D0008EB2AA /* Controller */,
+				FE7FDCEE22D301C8008EB2AA /* View */,
 				510C58E822D21A7100B69714 /* AppDelegate.swift */,
-				510C58EA22D21A7100B69714 /* ViewController.swift */,
 				510C58EC22D21A7100B69714 /* Main.storyboard */,
 				510C58EF22D21A7300B69714 /* Assets.xcassets */,
 				510C58FA22D21BB000B69714 /* QAList.json */,
 				510C58F122D21A7300B69714 /* LaunchScreen.storyboard */,
 				510C58F422D21A7300B69714 /* Info.plist */,
-				510C58FC22D22EB300B69714 /* QA1-1ViewController.swift */,
 			);
 			path = eProQA;
+			sourceTree = "<group>";
+		};
+		6A34069909CF41793D7BEB1B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB7CECD5E9B07E59CA3F99BC /* Pods-eProQA.debug.xcconfig */,
+				C17EB5A48B32114420DBDECA /* Pods-eProQA.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7FC549BE9232947904449211 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				266FC5981EF285E34C0BA274 /* Pods_eProQA.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE7FDCEE22D301C8008EB2AA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE7FDCEC22D301B9008EB2AA /* NextButtonUITableViewCell.swift */,
+				FE7FDCF322D33BC4008EB2AA /* AnswerTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE7FDCEF22D301D0008EB2AA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				510C58FC22D22EB300B69714 /* QA1-1ViewController.swift */,
+				FE7FDCEA22D2EDAC008EB2AA /* QA1-1SubViewController.swift */,
+				510C58EA22D21A7100B69714 /* MokingHomeViewController.swift */,
+				FE7FDCF022D320CE008EB2AA /* QuestionsUINavigationViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FE7FDCF522D34F71008EB2AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FE7FDCF622D34F94008EB2AA /* Question.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +140,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 510C58F722D21A7300B69714 /* Build configuration list for PBXNativeTarget "eProQA" */;
 			buildPhases = (
+				E1B3045B6595FFC24C080259 /* [CP] Check Pods Manifest.lock */,
 				510C58E122D21A7100B69714 /* Sources */,
 				510C58E222D21A7100B69714 /* Frameworks */,
 				510C58E322D21A7100B69714 /* Resources */,
+				13E26330C8B537E5D7796DA3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,13 +202,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13E26330C8B537E5D7796DA3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-eProQA/Pods-eProQA-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-eProQA/Pods-eProQA-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-eProQA/Pods-eProQA-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1B3045B6595FFC24C080259 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-eProQA-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		510C58E122D21A7100B69714 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE7FDCED22D301B9008EB2AA /* NextButtonUITableViewCell.swift in Sources */,
+				FE7FDCF722D34F94008EB2AA /* Question.swift in Sources */,
 				510C58FD22D22EB300B69714 /* QA1-1ViewController.swift in Sources */,
-				510C58EB22D21A7100B69714 /* ViewController.swift in Sources */,
+				FE7FDCF422D33BC4008EB2AA /* AnswerTableViewCell.swift in Sources */,
+				FE7FDCEB22D2EDAC008EB2AA /* QA1-1SubViewController.swift in Sources */,
+				510C58EB22D21A7100B69714 /* MokingHomeViewController.swift in Sources */,
+				FE7FDCF122D320CE008EB2AA /* QuestionsUINavigationViewController.swift in Sources */,
 				510C58E922D21A7100B69714 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +400,7 @@
 		};
 		510C58F822D21A7300B69714 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB7CECD5E9B07E59CA3F99BC /* Pods-eProQA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -307,6 +420,7 @@
 		};
 		510C58F922D21A7300B69714 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C17EB5A48B32114420DBDECA /* Pods-eProQA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
