@@ -135,7 +135,7 @@
         <!--Sub View Controller-->
         <scene sceneID="dl6-Sg-jUN">
             <objects>
-                <viewController id="4cW-gR-Ph2" customClass="QA1_1SubViewController" customModule="eProQA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuestionPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4cW-gR-Ph2" customClass="QA1_1SubViewController" customModule="eProQA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pqa-67-14X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,9 +156,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9AI-3L-JWU">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9AI-3L-JWU">
                                 <rect key="frame" x="0.0" y="134" width="375" height="513"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionChoice" id="4Pg-uR-tDM" customClass="AnswerTableViewCell" customModule="eProQA" customModuleProvider="target">
@@ -168,17 +167,41 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="checked" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wn4-Tl-myR">
-                                                    <rect key="frame" x="15" y="11" width="66" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Oaq-Ob-Vei">
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="43.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="m4U-E8-BtQ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="26.5" height="43.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="20" translatesAutoresizingMaskIntoConstraints="NO" id="Wn4-Tl-myR">
+                                                            <rect key="frame" x="31.5" y="0.0" width="39.5" height="43.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="item choice text" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvr-Nm-2EY">
+                                                            <rect key="frame" x="76" y="0.0" width="283" height="43.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Oaq-Ob-Vei" firstAttribute="leading" secondItem="eAh-eQ-IIq" secondAttribute="leading" constant="8" id="7Jb-Ho-Nap"/>
+                                                <constraint firstItem="Oaq-Ob-Vei" firstAttribute="top" secondItem="eAh-eQ-IIq" secondAttribute="top" id="UPG-T4-VuT"/>
+                                                <constraint firstAttribute="trailing" secondItem="Oaq-Ob-Vei" secondAttribute="trailing" constant="8" id="cti-6p-yG7"/>
+                                                <constraint firstAttribute="bottom" secondItem="Oaq-Ob-Vei" secondAttribute="bottom" id="fTZ-0M-dTX"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="checkLabel" destination="Wn4-Tl-myR" id="DSe-GV-El1"/>
+                                            <outlet property="itemNoLabel" destination="m4U-E8-BtQ" id="nyJ-xm-Ayq"/>
+                                            <outlet property="textChoiceLabel" destination="hvr-Nm-2EY" id="4Zu-BK-Enn"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="nextButton" id="wBa-mi-Jjm" customClass="NextButtonUITableViewCell" customModule="eProQA" customModuleProvider="target">
@@ -207,9 +230,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="9AI-3L-JWU" firstAttribute="trailing" secondItem="x5T-3q-Oqa" secondAttribute="trailing" id="6Nk-NE-E9e"/>
                             <constraint firstItem="IW0-4v-304" firstAttribute="leading" secondItem="x5T-3q-Oqa" secondAttribute="leading" constant="8" id="8Sq-Lk-cVW"/>
                             <constraint firstItem="G5W-9H-MrO" firstAttribute="leading" secondItem="x5T-3q-Oqa" secondAttribute="leading" constant="20" id="BeT-ev-1Ac"/>
+                            <constraint firstItem="9AI-3L-JWU" firstAttribute="leading" secondItem="x5T-3q-Oqa" secondAttribute="leading" id="N4y-W7-APe"/>
                             <constraint firstItem="G5W-9H-MrO" firstAttribute="firstBaseline" secondItem="IW0-4v-304" secondAttribute="baseline" constant="24.5" symbolType="layoutAnchor" id="eg3-Wm-NmD"/>
+                            <constraint firstItem="9AI-3L-JWU" firstAttribute="top" secondItem="G5W-9H-MrO" secondAttribute="bottom" constant="12.5" id="qoy-hC-rFR"/>
+                            <constraint firstItem="x5T-3q-Oqa" firstAttribute="bottom" secondItem="9AI-3L-JWU" secondAttribute="bottom" constant="20" id="rwi-fk-mR8"/>
                             <constraint firstItem="IW0-4v-304" firstAttribute="top" secondItem="x5T-3q-Oqa" secondAttribute="top" constant="8" id="wYK-lP-UOT"/>
                             <constraint firstItem="x5T-3q-Oqa" firstAttribute="trailing" secondItem="IW0-4v-304" secondAttribute="trailing" constant="8" id="yme-r1-0tE"/>
                         </constraints>
@@ -219,6 +246,7 @@
                     <connections>
                         <outlet property="questionTableView" destination="9AI-3L-JWU" id="R20-Ql-0eW"/>
                         <outlet property="stepView" destination="IW0-4v-304" id="vf5-ab-cKU"/>
+                        <outlet property="tableView" destination="9AI-3L-JWU" id="U8m-P1-PEc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KdI-mX-dIf" userLabel="First Responder" sceneMemberID="firstResponder"/>

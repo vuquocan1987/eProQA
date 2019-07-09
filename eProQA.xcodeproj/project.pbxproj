@@ -20,6 +20,8 @@
 		FE7FDCF122D320CE008EB2AA /* QuestionsUINavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7FDCF022D320CE008EB2AA /* QuestionsUINavigationViewController.swift */; };
 		FE7FDCF422D33BC4008EB2AA /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7FDCF322D33BC4008EB2AA /* AnswerTableViewCell.swift */; };
 		FE7FDCF722D34F94008EB2AA /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7FDCF622D34F94008EB2AA /* Question.swift */; };
+		FEEF089322D41ADD003B6E3B /* Questionaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEF089222D41ADD003B6E3B /* Questionaire.swift */; };
+		FEEF089522D493C6003B6E3B /* QuestionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEF089422D493C6003B6E3B /* QuestionPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		FE7FDCF022D320CE008EB2AA /* QuestionsUINavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsUINavigationViewController.swift; sourceTree = "<group>"; };
 		FE7FDCF322D33BC4008EB2AA /* AnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTableViewCell.swift; sourceTree = "<group>"; };
 		FE7FDCF622D34F94008EB2AA /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		FEEF089222D41ADD003B6E3B /* Questionaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questionaire.swift; sourceTree = "<group>"; };
+		FEEF089422D493C6003B6E3B /* QuestionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				FE7FDCF622D34F94008EB2AA /* Question.swift */,
+				FEEF089222D41ADD003B6E3B /* Questionaire.swift */,
+				FEEF089422D493C6003B6E3B /* QuestionPage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -253,7 +259,9 @@
 				FE7FDCF722D34F94008EB2AA /* Question.swift in Sources */,
 				510C58FD22D22EB300B69714 /* QA1-1ViewController.swift in Sources */,
 				FE7FDCF422D33BC4008EB2AA /* AnswerTableViewCell.swift in Sources */,
+				FEEF089522D493C6003B6E3B /* QuestionPage.swift in Sources */,
 				FE7FDCEB22D2EDAC008EB2AA /* QA1-1SubViewController.swift in Sources */,
+				FEEF089322D41ADD003B6E3B /* Questionaire.swift in Sources */,
 				510C58EB22D21A7100B69714 /* MokingHomeViewController.swift in Sources */,
 				FE7FDCF122D320CE008EB2AA /* QuestionsUINavigationViewController.swift in Sources */,
 				510C58E922D21A7100B69714 /* AppDelegate.swift in Sources */,

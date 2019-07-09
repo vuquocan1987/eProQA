@@ -16,55 +16,63 @@ class QA1_1SubViewController: UIViewController,UITableViewDelegate, UITableViewD
             title = "\(pageNumber)"
         }
     }
-    lazy var numberOfChoice:Int = {
-        return questionPageData[QuestionDataKeys.choice][QuestionDataKeys.choices].count
-    }()
-    
-    var questionPageData:JSON! {
+   
+    @IBOutlet weak var tableView: UITableView!
+    var page: QuestionPage! {
         didSet {
-            pageNumber = questionPageData[QuestionDataKeys.page].intValue
+            pageNumber = page.pageNumber
+            questionsList.append(page.question!)
         }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // remember to fix this
-        if section == (tableView.numberOfSections - 1) {
+        if section == (tableView.numberOfSections - 1 ) {
             return 1
         } else {
-            return numberOfChoice
+            return page.question!.choice!.choiceList.count
         }
         
     }
-    func setUpPageData(pageJsonData: JSON) {
-        let jsonQuestion = pageJsonData[QuestionDataKeys.question]
-        let choice = 
-        var question = Question(number: jsonQuestion[QuestionDataKeys.question_no],
-                                text: jsonQuestion[QuestionDataKeys.text],
-                                subtext: jsonQuestion[QuestionDataKeys.sub_text],
-                                choice: jsonQuestion,
-                                input: <#T##String?#>,
-                                sub_questions: <#T##[Question]?#>)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        questionsList[0].choice?.selectChoice(index: indexPath.item)
+        tableView.reloadData()
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         // +1 for the next question button
         return 1 + 1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == tableView.numberOfSections {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionChoice", for: indexPath)
-            cell.textLabel?.text = questionPageData[QuestionDataKeys.choice][QuestionDataKeys.choices][indexPath.item].stringValue
-            return cell
-        } else {
+        if indexPath.section == tableView.numberOfSections - 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "nextButton", for: indexPath)
             if let nextButtonCell = cell as? NextButtonUITableViewCell {
                 nextButtonCell.nextQuestionButton.setTitle("Next Question", for: UIControl.State.normal)
-                
+                nextButtonCell.nextQuestionButton.addTarget(self, action: #selector(nextQuestionTouched), for: .touchUpInside)
             }
+            return cell
+        } else {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionChoice", for: indexPath)
+            if let answerCell = cell as? AnswerTableViewCell {
+                let choiceItem = page.question!.choice!.choiceList[indexPath.item]
+                answerCell.textChoiceLabel.text = choiceItem.itemText
+                if (choiceItem.isSelected) {
+                answerCell.checkLabel.text = "c"
+                } else {
+                    answerCell.checkLabel.text = " "
+                }
+            }
+            
             return cell
         }
     }
-    
-
+    @objc func nextQuestionTouched(sender: UIButton) {
+        if let navController = navigationController as? QuestionsUINavigationViewController {
+            navController.goToNextQuestion(sender: self)
+        }
+        
+    }
+ 
     @IBOutlet weak var questionTableView: UITableView! {
         didSet {
             questionTableView.delegate = self
@@ -74,12 +82,16 @@ class QA1_1SubViewController: UIViewController,UITableViewDelegate, UITableViewD
     @IBOutlet weak var stepView: FPStepView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        stepView.totalStep = 10
-        stepView.currentStep = 3
-
+        if let navController = navigationController as? QuestionsUINavigationViewController {
+            stepView.totalStep = navController.pageList.count
+            title = "\(pageNumber)/\(navController.pageList.count)"
+        }
+        stepView.currentStep = pageNumber
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 80
         // Do any additional setup after loading the view.
     }
-    
+
 
     /*
     // MARK: - Navigation

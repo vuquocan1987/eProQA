@@ -9,12 +9,12 @@
 import UIKit
 import SwiftyJSON
 class QuestionsUINavigationViewController: UINavigationController {
-    var questionsData:JSON? {
+    var pageList: [QuestionPage]! {
         didSet {
-            questionAndAnswerData = questionsData
+       
         }
     }
-    var questionAndAnswerData:JSON?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -22,10 +22,15 @@ class QuestionsUINavigationViewController: UINavigationController {
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         super.pushViewController(viewController, animated: animated)
-        if let questionViewController = viewController as? QA1_1SubViewController {
-        }
-    }
 
+    }
+    func goToNextQuestion(sender: QA1_1SubViewController) {
+
+        let nextQuestionViewController:QA1_1SubViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QuestionPage") as! QA1_1SubViewController
+
+        nextQuestionViewController.page = pageList![sender.pageNumber]
+            pushViewController(nextQuestionViewController, animated: true)
+    }
     /*
     // MARK: - Navigation
 
