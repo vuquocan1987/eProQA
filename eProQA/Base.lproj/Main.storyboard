@@ -132,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="2060" y="6"/>
         </scene>
-        <!--Sub View Controller-->
+        <!--Page Question View Controller-->
         <scene sceneID="dl6-Sg-jUN">
             <objects>
-                <viewController storyboardIdentifier="QuestionPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4cW-gR-Ph2" customClass="QA1_1SubViewController" customModule="eProQA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuestionPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4cW-gR-Ph2" customClass="QA1_1PageQuestionViewController" customModule="eProQA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pqa-67-14X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -157,7 +157,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9AI-3L-JWU">
-                                <rect key="frame" x="0.0" y="134" width="375" height="513"/>
+                                <rect key="frame" x="0.0" y="134" width="375" height="464"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionChoice" id="4Pg-uR-tDM" customClass="AnswerTableViewCell" customModule="eProQA" customModuleProvider="target">
@@ -242,7 +242,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="x5T-3q-Oqa"/>
                     </view>
-                    <navigationItem key="navigationItem" id="IZB-1G-eeb"/>
+                    <navigationItem key="navigationItem" id="IZB-1G-eeb">
+                        <barButtonItem key="leftBarButtonItem" systemItem="undo" id="QtP-vH-2Ua">
+                            <connections>
+                                <action selector="backButtonPressed:" destination="4cW-gR-Ph2" id="86g-A0-fko"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="6b3-po-t7d">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="4cW-gR-Ph2" id="yM6-hz-Weo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="questionTableView" destination="9AI-3L-JWU" id="R20-Ql-0eW"/>
                         <outlet property="stepView" destination="IW0-4v-304" id="vf5-ab-cKU"/>
@@ -250,6 +262,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KdI-mX-dIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="riv-04-YnD">
+                    <rect key="frame" x="0.0" y="0.0" width="499" height="493"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="6yf-NS-Bwo"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="2800.8000000000002" y="1.3493253373313345"/>
         </scene>

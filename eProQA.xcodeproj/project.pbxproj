@@ -15,11 +15,12 @@
 		510C58FB22D21BB000B69714 /* QAList.json in Resources */ = {isa = PBXBuildFile; fileRef = 510C58FA22D21BB000B69714 /* QAList.json */; };
 		510C58FD22D22EB300B69714 /* QA1-1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C58FC22D22EB300B69714 /* QA1-1ViewController.swift */; };
 		A9602DDB387BCB613CA4B2D3 /* Pods_eProQA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 266FC5981EF285E34C0BA274 /* Pods_eProQA.framework */; };
-		FE7FDCEB22D2EDAC008EB2AA /* QA1-1SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7FDCEA22D2EDAC008EB2AA /* QA1-1SubViewController.swift */; };
+		FE7FDCEB22D2EDAC008EB2AA /* QA1-1PageQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7FDCEA22D2EDAC008EB2AA /* QA1-1PageQuestionViewController.swift */; };
 		FE7FDCED22D301B9008EB2AA /* NextButtonUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7FDCEC22D301B9008EB2AA /* NextButtonUITableViewCell.swift */; };
 		FE7FDCF122D320CE008EB2AA /* QuestionsUINavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7FDCF022D320CE008EB2AA /* QuestionsUINavigationViewController.swift */; };
 		FE7FDCF422D33BC4008EB2AA /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7FDCF322D33BC4008EB2AA /* AnswerTableViewCell.swift */; };
 		FE7FDCF722D34F94008EB2AA /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7FDCF622D34F94008EB2AA /* Question.swift */; };
+		FEEB067C22D600FB003A0038 /* JSonGenerator in Resources */ = {isa = PBXBuildFile; fileRef = FEEB067B22D600FB003A0038 /* JSonGenerator */; };
 		FEEF089322D41ADD003B6E3B /* Questionaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEF089222D41ADD003B6E3B /* Questionaire.swift */; };
 		FEEF089522D493C6003B6E3B /* QuestionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEF089422D493C6003B6E3B /* QuestionPage.swift */; };
 /* End PBXBuildFile section */
@@ -37,11 +38,12 @@
 		510C58FC22D22EB300B69714 /* QA1-1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QA1-1ViewController.swift"; sourceTree = "<group>"; };
 		BB7CECD5E9B07E59CA3F99BC /* Pods-eProQA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eProQA.debug.xcconfig"; path = "Target Support Files/Pods-eProQA/Pods-eProQA.debug.xcconfig"; sourceTree = "<group>"; };
 		C17EB5A48B32114420DBDECA /* Pods-eProQA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eProQA.release.xcconfig"; path = "Target Support Files/Pods-eProQA/Pods-eProQA.release.xcconfig"; sourceTree = "<group>"; };
-		FE7FDCEA22D2EDAC008EB2AA /* QA1-1SubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QA1-1SubViewController.swift"; sourceTree = "<group>"; };
+		FE7FDCEA22D2EDAC008EB2AA /* QA1-1PageQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QA1-1PageQuestionViewController.swift"; sourceTree = "<group>"; };
 		FE7FDCEC22D301B9008EB2AA /* NextButtonUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButtonUITableViewCell.swift; sourceTree = "<group>"; };
 		FE7FDCF022D320CE008EB2AA /* QuestionsUINavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsUINavigationViewController.swift; sourceTree = "<group>"; };
 		FE7FDCF322D33BC4008EB2AA /* AnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTableViewCell.swift; sourceTree = "<group>"; };
 		FE7FDCF622D34F94008EB2AA /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		FEEB067B22D600FB003A0038 /* JSonGenerator */ = {isa = PBXFileReference; lastKnownFileType = text; path = JSonGenerator; sourceTree = "<group>"; };
 		FEEF089222D41ADD003B6E3B /* Questionaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questionaire.swift; sourceTree = "<group>"; };
 		FEEF089422D493C6003B6E3B /* QuestionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +88,7 @@
 				510C58EC22D21A7100B69714 /* Main.storyboard */,
 				510C58EF22D21A7300B69714 /* Assets.xcassets */,
 				510C58FA22D21BB000B69714 /* QAList.json */,
+				FEEB067B22D600FB003A0038 /* JSonGenerator */,
 				510C58F122D21A7300B69714 /* LaunchScreen.storyboard */,
 				510C58F422D21A7300B69714 /* Info.plist */,
 			);
@@ -122,7 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				510C58FC22D22EB300B69714 /* QA1-1ViewController.swift */,
-				FE7FDCEA22D2EDAC008EB2AA /* QA1-1SubViewController.swift */,
+				FE7FDCEA22D2EDAC008EB2AA /* QA1-1PageQuestionViewController.swift */,
 				510C58EA22D21A7100B69714 /* MokingHomeViewController.swift */,
 				FE7FDCF022D320CE008EB2AA /* QuestionsUINavigationViewController.swift */,
 			);
@@ -202,6 +205,7 @@
 				510C58F322D21A7300B69714 /* LaunchScreen.storyboard in Resources */,
 				510C58FB22D21BB000B69714 /* QAList.json in Resources */,
 				510C58F022D21A7300B69714 /* Assets.xcassets in Resources */,
+				FEEB067C22D600FB003A0038 /* JSonGenerator in Resources */,
 				510C58EE22D21A7100B69714 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,7 +264,7 @@
 				510C58FD22D22EB300B69714 /* QA1-1ViewController.swift in Sources */,
 				FE7FDCF422D33BC4008EB2AA /* AnswerTableViewCell.swift in Sources */,
 				FEEF089522D493C6003B6E3B /* QuestionPage.swift in Sources */,
-				FE7FDCEB22D2EDAC008EB2AA /* QA1-1SubViewController.swift in Sources */,
+				FE7FDCEB22D2EDAC008EB2AA /* QA1-1PageQuestionViewController.swift in Sources */,
 				FEEF089322D41ADD003B6E3B /* Questionaire.swift in Sources */,
 				510C58EB22D21A7100B69714 /* MokingHomeViewController.swift in Sources */,
 				FE7FDCF122D320CE008EB2AA /* QuestionsUINavigationViewController.swift in Sources */,

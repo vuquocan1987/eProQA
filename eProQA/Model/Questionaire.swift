@@ -63,5 +63,5 @@ struct JSONKey {
     static let sub_questions = "sub_questions"
     static let number = "number"
     static let next = "next"
-
+    static let question_type = "question_type"
 }

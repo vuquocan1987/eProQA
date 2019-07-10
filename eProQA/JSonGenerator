@@ -1,0 +1,78 @@
+
+{
+text: '{{lorem(10,"words")}}',
+sub_text: '{{lorem(5,"words")}}',
+text_for_young: '{{lorem(5,"words")}}',
+question_no_text: '{{lorem(5,"words")}}',
+all_questions: '{{integer(7,11)}}',
+length_of_time: '{{integer(30,40)}}',
+page: [
+'{{repeat(5, 7)}}',
+{
+number: '{{index(1)}}',
+text: '{{lorem(5,"words")}}',
+page_type: '{{integer(0,1)}}',
+question: {
+question_type: '{{integer(1,5)}}',
+question_no: '{{index(1)}}',
+text: '{{lorem(10, "words")}}',
+sub_text: '{{lorem(5,"words")}}',
+choice: {
+choices: [
+'{{repeat(4,5)}}',
+{
+item_no: '{{index(1)}}',
+item_text: '{{lorem(5,"words")}}',
+sub_text: '{{lorem(3,"words")}}',
+input: {
+text: [ '{{repeat(3)}}',
+'{{lorem(1,"words")}}'
+],
+placeholder: '{{lorem(5,"words")}}'
+},
+next: '?'
+}
+],
+start_text: '#',
+end_text: '%'
+},
+sub_questions: [
+'{{repeat(2,3)}}',
+{
+question: {
+question_type: '{{integer(1,5)}}',
+question_no: '{{index(1)}}',
+text: '{{lorem(10, "words")}}',
+sub_text: '{{lorem(5,"words")}}',
+choice: {
+choices: [
+'{{repeat(4,5)}}',
+{
+item_no: '{{index(1)}}',
+item_text: '{{lorem(5,"words")}}',
+sub_text: '{{lorem(3,"words")}}',
+input: {
+text: [ '{{repeat(3)}}',
+'{{lorem(1,"words")}}'
+],
+placeholder: '{{lorem(5,"words")}}'
+},
+next: '?'
+}
+],
+start_text: '#',
+end_text: '%'
+}
+}}]
+},
+input: {
+text: [ '{{repeat(3)}}',
+'{{lorem(1,"words")}}'
+] ,
+
+placeholder: '{{lorem(5,"words")}}'
+}
+
+}
+]
+}

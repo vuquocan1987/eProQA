@@ -9,28 +9,52 @@
 import UIKit
 import FPStepView
 import SwiftyJSON
-class QA1_1SubViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
-    var questionsList = [Question]()
-    var pageNumber: Int = 0 {
+class QA1_1PageQuestionViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+    var questionsList : [Question]! {
         didSet {
-            title = "\(pageNumber)"
+            tableView.reloadData()
         }
     }
-   
+    var pageList: [QuestionPage]!
+    var currentPageIndex = 0 {
+        didSet {
+        
+            reloadPage()
+        }
+    }
+    var currentPage: QuestionPage! {
+        didSet {
+            currentPageNumber = currentPage.pageNumber
+//            questionsList.append(currentPage.question!)
+        }
+    }
+    var currentPageNumber: Int = 0 {
+        didSet {
+            title = "\(currentPageNumber)"
+        }
+    }
+    func reloadPage(){
+        currentPage = pageList[currentPageIndex]
+        questionsList = currentPage.getQuestionList()
+        title = "\(currentPageNumber)/\(pageList.count)"
+    }
+    @IBAction func backButtonPressed(_ sender: Any) {
+        
+    }
+    
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        
+    }
+    
     @IBOutlet weak var tableView: UITableView!
-    var page: QuestionPage! {
-        didSet {
-            pageNumber = page.pageNumber
-            questionsList.append(page.question!)
-        }
-    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // remember to fix this
         if section == (tableView.numberOfSections - 1 ) {
             return 1
         } else {
-            return page.question!.choice!.choiceList.count
+            return currentPage.question.choice!.choiceList.count
         }
         
     }
@@ -38,6 +62,8 @@ class QA1_1SubViewController: UIViewController,UITableViewDelegate, UITableViewD
         questionsList[0].choice?.selectChoice(index: indexPath.item)
         tableView.reloadData()
     }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "hello"    }
     func numberOfSections(in tableView: UITableView) -> Int {
         // +1 for the next question button
         return 1 + 1
@@ -54,7 +80,7 @@ class QA1_1SubViewController: UIViewController,UITableViewDelegate, UITableViewD
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionChoice", for: indexPath)
             if let answerCell = cell as? AnswerTableViewCell {
-                let choiceItem = page.question!.choice!.choiceList[indexPath.item]
+                let choiceItem = currentPage.question.choice!.choiceList[indexPath.item]
                 answerCell.textChoiceLabel.text = choiceItem.itemText
                 if (choiceItem.isSelected) {
                 answerCell.checkLabel.text = "c"
@@ -70,7 +96,10 @@ class QA1_1SubViewController: UIViewController,UITableViewDelegate, UITableViewD
         if let navController = navigationController as? QuestionsUINavigationViewController {
             navController.goToNextQuestion(sender: self)
         }
-        
+        if currentPageIndex < pageList.count - 1 {
+            // once you change current
+            currentPageIndex += 1
+        }
     }
  
     @IBOutlet weak var questionTableView: UITableView! {
@@ -82,13 +111,11 @@ class QA1_1SubViewController: UIViewController,UITableViewDelegate, UITableViewD
     @IBOutlet weak var stepView: FPStepView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let navController = navigationController as? QuestionsUINavigationViewController {
-            stepView.totalStep = navController.pageList.count
-            title = "\(pageNumber)/\(navController.pageList.count)"
-        }
-        stepView.currentStep = pageNumber
+        
+        stepView.totalStep = pageList.count
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 80
+        reloadPage()
         // Do any additional setup after loading the view.
     }
 

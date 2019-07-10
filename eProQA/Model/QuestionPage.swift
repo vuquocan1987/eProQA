@@ -13,22 +13,35 @@ class QuestionPage {
     var text: String?
     var subtext: String?
     var input: String?
-    var question: Question?
+    var question: Question
     init (data:JSON) {
         pageNumber = data[JSONKey.number].intValue
         text = data[JSONKey.text].string
         subtext = data[JSONKey.sub_text].string
         question = Question(data: data[JSONKey.question])
     }
-    func pickAnswer(forQuestionAtIndex qIndex: Int, withAnswerAtIndex aIndex: Int ){
+    func pickAnswer(forQuestionAtIndex qIndex: Int, withAnswerAtIndex aIndex: Int){
+        
+    }
+    func getQuestionList() -> [Question] {
+        var qList = [Question]()
+        qList.append(question)
+        if let subQuestions = question.subQuestions {
+            for q in subQuestions {
+                qList.append(q)
+            }
+        }
+        return qList
         
     }
 }
-enum QuestionType {
-    case multipleChoice
+enum QuestionType: Int {
+    case multipleChoice = 1
     case yesNo
     case subMultipleChoice
     case input
+    case inputMultiple
+    case bigtext
 }
 class Question {
     var questionType: QuestionType
@@ -45,16 +58,22 @@ class Question {
         subtext = data[JSONKey.sub_text].string
         choice = Choice(data: data[JSONKey.choice])
         input = nil
-        subQuestions = nil
-        if input != nil {
-            questionType = .input
-        } else if subQuestions != nil {
-            questionType = .subMultipleChoice
-        } else if choice != nil {
-            questionType = .multipleChoice
+        
+        if let subQuestionsData = data[JSONKey.sub_questions].array {
+            subQuestions = [Question]()
+            for questionData in subQuestionsData {
+                let qData = questionData[JSONKey.question]
+                
+                if qData[JSONKey.text].string == nil {
+                    
+                }
+                subQuestions!.append(Question(data: qData))
+            }
         } else {
-            questionType = .yesNo
+            subQuestions = nil
         }
+        let questionTypeRawValue = data[JSONKey.question_type].int!
+        questionType = QuestionType(rawValue: questionTypeRawValue)!
     }
 }
 struct Choice {

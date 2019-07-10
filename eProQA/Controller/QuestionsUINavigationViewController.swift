@@ -24,11 +24,11 @@ class QuestionsUINavigationViewController: UINavigationController {
         super.pushViewController(viewController, animated: animated)
 
     }
-    func goToNextQuestion(sender: QA1_1SubViewController) {
+    func goToNextQuestion(sender: QA1_1PageQuestionViewController) {
 
-        let nextQuestionViewController:QA1_1SubViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QuestionPage") as! QA1_1SubViewController
+        let nextQuestionViewController:QA1_1PageQuestionViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QuestionPage") as! QA1_1PageQuestionViewController
 
-        nextQuestionViewController.page = pageList![sender.pageNumber]
+        nextQuestionViewController.currentPage = pageList![sender.currentPageNumber]
             pushViewController(nextQuestionViewController, animated: true)
     }
     /*

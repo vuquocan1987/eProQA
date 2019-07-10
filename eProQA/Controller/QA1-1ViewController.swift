@@ -38,11 +38,11 @@ class QA1_1ViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ToQuestion" {
-            let questionsNavigationController = segue.destination as! QuestionsUINavigationViewController
-            questionsNavigationController.pageList = questionaire.questionPages
-            if let questionViewController = questionsNavigationController.viewControllers[0] as? QA1_1SubViewController {
-                questionViewController.page = questionaire.questionPages[0]
-            }
+//            let questionsNavigationController = segue.destination as! QuestionsUINavigationViewController
+//            questionsNavigationController.pageList = questionaire.questionPages
+//            if let questionViewController = questionsNavigationController.viewControllers[0] as? QA1_1PageQuestionViewController {
+//                questionViewController.currentPage = questionaire.questionPages[0]
+//            }
         }
     }
 }
