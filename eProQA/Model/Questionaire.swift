@@ -33,8 +33,6 @@ class Questionaire {
         for pageData in questionPagesJSON {
             questionPages.append(QuestionPage(data: pageData))
         }
-        
-        QuestionPage(data: data[JSONKey.page])
     
     }
    
@@ -64,4 +62,7 @@ struct JSONKey {
     static let number = "number"
     static let next = "next"
     static let question_type = "question_type"
+    static let first = "first"
+    static let last = "last"
+    static let center = "center"
 }
