@@ -16,10 +16,13 @@
 		510C58FD22D22EB300B69714 /* QA1-1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C58FC22D22EB300B69714 /* QA1-1ViewController.swift */; };
 		A9602DDB387BCB613CA4B2D3 /* Pods_eProQA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 266FC5981EF285E34C0BA274 /* Pods_eProQA.framework */; };
 		FE7FDCEB22D2EDAC008EB2AA /* QA1-1PageQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7FDCEA22D2EDAC008EB2AA /* QA1-1PageQuestionViewController.swift */; };
-		FE7FDCED22D301B9008EB2AA /* NextButtonUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7FDCEC22D301B9008EB2AA /* NextButtonUITableViewCell.swift */; };
+		FE7FDCED22D301B9008EB2AA /* ButtonUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7FDCEC22D301B9008EB2AA /* ButtonUITableViewCell.swift */; };
 		FE7FDCF122D320CE008EB2AA /* QuestionsUINavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7FDCF022D320CE008EB2AA /* QuestionsUINavigationViewController.swift */; };
 		FE7FDCF422D33BC4008EB2AA /* AnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7FDCF322D33BC4008EB2AA /* AnswerTableViewCell.swift */; };
 		FE7FDCF722D34F94008EB2AA /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7FDCF622D34F94008EB2AA /* Question.swift */; };
+		FEE880AA22D80F32002E672C /* BigTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE880A922D80F32002E672C /* BigTextTableViewCell.swift */; };
+		FEE880AC22D83F9E002E672C /* InputChoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE880AB22D83F9E002E672C /* InputChoiceTableViewCell.swift */; };
+		FEE880AE22D883A8002E672C /* FinishQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE880AD22D883A8002E672C /* FinishQuestionViewController.swift */; };
 		FEEB067C22D600FB003A0038 /* JSonGenerator in Resources */ = {isa = PBXBuildFile; fileRef = FEEB067B22D600FB003A0038 /* JSonGenerator */; };
 		FEEB067E22D6E56D003A0038 /* OneTextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEB067D22D6E56D003A0038 /* OneTextFieldTableViewCell.swift */; };
 		FEEB068022D6E57D003A0038 /* TwoTextFieldsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEB067F22D6E57D003A0038 /* TwoTextFieldsTableViewCell.swift */; };
@@ -41,10 +44,13 @@
 		BB7CECD5E9B07E59CA3F99BC /* Pods-eProQA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eProQA.debug.xcconfig"; path = "Target Support Files/Pods-eProQA/Pods-eProQA.debug.xcconfig"; sourceTree = "<group>"; };
 		C17EB5A48B32114420DBDECA /* Pods-eProQA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eProQA.release.xcconfig"; path = "Target Support Files/Pods-eProQA/Pods-eProQA.release.xcconfig"; sourceTree = "<group>"; };
 		FE7FDCEA22D2EDAC008EB2AA /* QA1-1PageQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QA1-1PageQuestionViewController.swift"; sourceTree = "<group>"; };
-		FE7FDCEC22D301B9008EB2AA /* NextButtonUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButtonUITableViewCell.swift; sourceTree = "<group>"; };
+		FE7FDCEC22D301B9008EB2AA /* ButtonUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonUITableViewCell.swift; sourceTree = "<group>"; };
 		FE7FDCF022D320CE008EB2AA /* QuestionsUINavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsUINavigationViewController.swift; sourceTree = "<group>"; };
 		FE7FDCF322D33BC4008EB2AA /* AnswerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTableViewCell.swift; sourceTree = "<group>"; };
 		FE7FDCF622D34F94008EB2AA /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		FEE880A922D80F32002E672C /* BigTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigTextTableViewCell.swift; sourceTree = "<group>"; };
+		FEE880AB22D83F9E002E672C /* InputChoiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputChoiceTableViewCell.swift; sourceTree = "<group>"; };
+		FEE880AD22D883A8002E672C /* FinishQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishQuestionViewController.swift; sourceTree = "<group>"; };
 		FEEB067B22D600FB003A0038 /* JSonGenerator */ = {isa = PBXFileReference; lastKnownFileType = text; path = JSonGenerator; sourceTree = "<group>"; };
 		FEEB067D22D6E56D003A0038 /* OneTextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		FEEB067F22D6E57D003A0038 /* TwoTextFieldsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoTextFieldsTableViewCell.swift; sourceTree = "<group>"; };
@@ -119,10 +125,12 @@
 		FE7FDCEE22D301C8008EB2AA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FE7FDCEC22D301B9008EB2AA /* NextButtonUITableViewCell.swift */,
+				FE7FDCEC22D301B9008EB2AA /* ButtonUITableViewCell.swift */,
 				FE7FDCF322D33BC4008EB2AA /* AnswerTableViewCell.swift */,
 				FEEB067D22D6E56D003A0038 /* OneTextFieldTableViewCell.swift */,
 				FEEB067F22D6E57D003A0038 /* TwoTextFieldsTableViewCell.swift */,
+				FEE880A922D80F32002E672C /* BigTextTableViewCell.swift */,
+				FEE880AB22D83F9E002E672C /* InputChoiceTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -134,6 +142,7 @@
 				FE7FDCEA22D2EDAC008EB2AA /* QA1-1PageQuestionViewController.swift */,
 				510C58EA22D21A7100B69714 /* MokingHomeViewController.swift */,
 				FE7FDCF022D320CE008EB2AA /* QuestionsUINavigationViewController.swift */,
+				FEE880AD22D883A8002E672C /* FinishQuestionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -265,13 +274,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE7FDCED22D301B9008EB2AA /* NextButtonUITableViewCell.swift in Sources */,
+				FEE880AA22D80F32002E672C /* BigTextTableViewCell.swift in Sources */,
+				FEE880AC22D83F9E002E672C /* InputChoiceTableViewCell.swift in Sources */,
+				FE7FDCED22D301B9008EB2AA /* ButtonUITableViewCell.swift in Sources */,
 				FEEB067E22D6E56D003A0038 /* OneTextFieldTableViewCell.swift in Sources */,
 				FE7FDCF722D34F94008EB2AA /* Question.swift in Sources */,
 				510C58FD22D22EB300B69714 /* QA1-1ViewController.swift in Sources */,
 				FE7FDCF422D33BC4008EB2AA /* AnswerTableViewCell.swift in Sources */,
 				FEEF089522D493C6003B6E3B /* QuestionPage.swift in Sources */,
 				FE7FDCEB22D2EDAC008EB2AA /* QA1-1PageQuestionViewController.swift in Sources */,
+				FEE880AE22D883A8002E672C /* FinishQuestionViewController.swift in Sources */,
 				FEEF089322D41ADD003B6E3B /* Questionaire.swift in Sources */,
 				FEEB068022D6E57D003A0038 /* TwoTextFieldsTableViewCell.swift in Sources */,
 				510C58EB22D21A7100B69714 /* MokingHomeViewController.swift in Sources */,
@@ -431,7 +443,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nott.eProQA;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rk.eProQA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -451,7 +463,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nott.eProQA;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rk.eProQA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

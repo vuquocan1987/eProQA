@@ -1,21 +1,21 @@
 //
-//  NextButtonUITableViewCell.swift
+//  BigTextTableViewCell.swift
 //  eProQA
 //
-//  Created by Rikkeisoft on 7/8/19.
+//  Created by Rikkeisoft on 7/12/19.
 //  Copyright © 2019 Vu Quoc An. All rights reserved.
 //
 
 import UIKit
 
-class NextButtonUITableViewCell: UITableViewCell {
+class BigTextTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var nextQuestionButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+    @IBOutlet weak var textView: UITextView!
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

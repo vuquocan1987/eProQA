@@ -1,28 +1,29 @@
 //
-//  AnswerTableViewCell.swift
+//  InputChoiceTableViewCell.swift
 //  eProQA
 //
-//  Created by Rikkeisoft on 7/8/19.
+//  Created by Rikkeisoft on 7/12/19.
 //  Copyright © 2019 Vu Quoc An. All rights reserved.
 //
 
 import UIKit
 
-class AnswerTableViewCell: UITableViewCell {
+class InputChoiceTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var itemNoLabel: UILabel!
+    @IBOutlet weak var inputText: UITextField!
+    @IBOutlet weak var lastLabel: UILabel!
+    @IBOutlet weak var firstLabel: UILabel!
+    @IBOutlet weak var itemLabel: UILabel!
     @IBOutlet weak var checkLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    @IBOutlet weak var inputStack: UIStackView!
-    @IBAction func inputTextField(_ sender: Any) {
-    }
-    @IBOutlet weak var textChoiceLabel: UILabel!
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+
         // Configure the view for the selected state
     }
+
 }
